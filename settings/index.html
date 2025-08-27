@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设置</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="section">
+        <div class="section-title">外观设置</div>
+        <div class="row">
+          <label for="cupImage">水杯图标</label>
+          <input type="file" id="cupImage" accept="image/*" />
+        </div>
+        <div class="row presets">
+          <div class="preset-title">快速选择</div>
+          <div class="preset-list" id="presetList"></div>
+        </div>
+        <div class="row">
+          <label for="numColor">数字颜色</label>
+          <input type="color" id="numColor" />
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="section-title">系统设置</div>
+        <div class="row">
+          <label for="autoLaunch">开机自启</label>
+          <input type="checkbox" id="autoLaunch" />
+        </div>
+        <div class="row">
+          <button id="resetBtn">后台清零</button>
+        </div>
+      </div>
+    </div>
+    <script src="settings.js"></script>
+  </body>
+</html>
+
+

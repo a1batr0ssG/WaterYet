@@ -1,0 +1,48 @@
+{
+  "name": "water-yet",
+  "version": "1.0.0",
+  "description": "A tiny macOS Electron app: draggable cup icon with daily water counter.",
+  "main": "main.js",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "prebuild": "node scripts/gen-icon.js",
+    "build": "electron-builder --mac --x64 --arm64 --dir",
+    "predist": "node scripts/gen-icon.js",
+    "dist": "electron-builder --mac --x64 --arm64"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "29.4.5",
+    "electron-builder": "24.13.3",
+    "sharp": "0.33.4",
+    "png2icons": "2.0.1"
+  },
+  "build": {
+    "appId": "com.example.wateryet",
+    "productName": "Water Yet",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "settings/**/*",
+      "images_default/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png",
+      "target": [
+        { "target": "dmg", "arch": ["x64", "arm64"] },
+        { "target": "zip", "arch": ["x64", "arm64"] }
+      ]
+    },
+    "dmg": {
+      "icon": "build/icon.icns"
+    }
+  }
+}
+

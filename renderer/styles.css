@@ -1,0 +1,56 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  -webkit-user-select: none;
+}
+
+#container {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  -webkit-app-region: drag; /* allow drag anywhere except .no-drag */
+}
+
+#cup-wrap {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#counter {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial,
+    sans-serif;
+  font-size: 28px;
+  color: #1a1a1a;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+  position: absolute;
+  pointer-events: none;
+}
+
+#cup {
+  width: 112px;
+  height: 112px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 96 96"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="%23a0d8ff"/><stop offset="100%" stop-color="%2364b5f6"/></linearGradient></defs><g fill="none" stroke="%23222" stroke-width="3" stroke-linejoin="round"><path d="M20 20 h56 l-6 52 a20 20 0 0 1 -20 18 h-4 a20 20 0 0 1 -20 -18 z" fill="white"/><path d="M76 24 h10 a8 8 0 0 1 0 16 h-8" fill="none"/></g><path d="M26 36 h44 v18 a16 16 0 0 1 -16 16 h-12 a16 16 0 0 1 -16 -16z" fill="url(%23g)"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.no-drag { -webkit-app-region: no-drag; }
+
+
