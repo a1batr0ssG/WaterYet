@@ -19,4 +19,4 @@
 
 ## 使用示例
 
-<video src="Example.mov"></video>
+<video src="Example.mp4"></video>
